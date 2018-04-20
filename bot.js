@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   console.log(`LOG: S: ${msg.guild.name} M: ${msg.content} Y: ${msg.author.tag}`);
-  if (msg.author.id === process.env.sahip) return;
+  if (msg.author.id === process.env.id) return;
   if (msg.author.bot) return;
 
   if (!msg.content.startsWith(prefix)) {
