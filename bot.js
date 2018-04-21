@@ -23,7 +23,7 @@ client.on('message', msg => {
 client.on("message", msg => {
   if (msg.content.toLowerCase().match(/(discord\.gg\/)|(discordapp\.com\/invite\/)/g) && !msg.author.bot && msg.channel.type === "text" && msg.channel.permissionsFor(msg.guild.member(client.user)).has("MANAGE_MESSAGES")) {
     msg.delete(30).then(deletedMsg => {
-      deletedMsg.reply(":x: Discord davet linki paylaştığını algıladık. Bu sunucu ProRehberTR tarafından korunmakta. :x: ").catch(e => {
+      deletedMsg.reply(":x: Discord davet linki paylaştığını algıladık. Bu sunucu ProRehberTR2 tarafından korunmakta. :x: ").catch(e => {
         console.error(e);
       });
     }).catch(e => {
