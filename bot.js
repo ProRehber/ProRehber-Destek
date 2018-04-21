@@ -19,6 +19,9 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'ping') {
     msg.reply('Pong! **' + client.ping + '** ms');
   }
+  if (msg.content.toLowerCase() === prefix + 'davet') {
+    msg.reply('https://discordapp.com/oauth2/authorize?client_id=408549238734323712&scope=bot&permissions=-1');
+  }
 //Koruma
 client.on("message", msg => {
   if (msg.content.toLowerCase().match(/(discord\.gg\/)|(discordapp\.com\/invite\/)/g) && !msg.author.bot && msg.channel.type === "text" && msg.channel.permissionsFor(msg.guild.member(client.user)).has("MANAGE_MESSAGES")) {
@@ -40,7 +43,7 @@ client.on("message", msg => {
 //temizleme
 //yardım
   if (msg.content.toLowerCase() === prefix + 'yardım') {
-    msg.channel.sendMessage("**Ben özel yapım bir botum ve 7/24 açığım.İşte komutlarım ve özelliklerim ; \np!yardım = Bu menüyü açar. \np!temizle = 100 adet mesaj siler. \np!ping = Pingimi gösterir. \nAyrıca Reklam korumasıda vardır. \nBu bot can123123123#9568 tarafından yapılmıştır.**");
+    msg.channel.sendMessage("**Ben özel yapım bir botum ve 7/24 açığım.İşte komutlarım ve özelliklerim ; \np!davet = Davet linkimi gösterir. \np!yardım = Bu menüyü açar. \np!temizle = 100 adet mesaj siler. \np!ping = Pingimi gösterir. \nAyrıca Reklam korumasıda vardır. \nBu bot can123123123#9568 tarafından yapılmıştır.**");
   }
 //yardım
   if (msg.content.toLowerCase() === prefix + 'reboot') {
