@@ -40,7 +40,7 @@ client.on("message", msg => {
 //temizleme
 //yardım
   if (msg.content.toLowerCase() === prefix + 'yardım') {
-    msg.channel.sendMessage("Ben özel yapım bir botum ve 7/24 açığım.İşte komutlarım ve özelliklerim ; \np!temizle = 100 adet mesaj siler. \np!ping = Pingimi gösterir. \nAyrıca Reklam korumasıda vardır.");
+    msg.channel.sendMessage("**Ben özel yapım bir botum ve 7/24 açığım.İşte komutlarım ve özelliklerim ; \np!yardım = Bu menüyü açar. \np!temizle = 100 adet mesaj siler. \np!ping = Pingimi gösterir. \nAyrıca Reklam korumasıda vardır. \nBu bot can123123123#9568 tarafından yapılmıştır.**");
   }
 //yardım
   if (msg.content.toLowerCase() === prefix + 'reboot') {
