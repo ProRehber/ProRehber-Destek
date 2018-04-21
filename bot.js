@@ -7,6 +7,7 @@ var prefix = process.env.prefix;
 client.on('ready', () => {
   console.log(`BOT: ${client.user.username} adı ile giriş yaptı!`);
 });
+client.user.setActivity(prefix + 'yardım | ' + client.guilds.size + ' sunucu' + 'Özel Bot');
 
 client.on('message', msg => {
   console.log(`LOG: S: ${msg.guild.name} M: ${msg.content} Y: ${msg.author.tag}`);
