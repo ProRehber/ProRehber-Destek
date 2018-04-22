@@ -7,7 +7,6 @@ var prefix = process.env.prefix;
 client.on('ready', () => {
   console.log(`BOT: ${client.user.username} adı ile giriş yaptı!`);
 });
-  client.user.setGame('Küfür-Reklam Koruma Deneme Botu');
 
 client.on('message', msg => {
   console.log(`LOG: S: ${msg.guild.name} M: ${msg.content} Y: ${msg.author.tag}`);
