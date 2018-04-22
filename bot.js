@@ -7,6 +7,7 @@ var prefix = process.env.prefix;
 client.on('ready', () => {
   console.log(`BOT: ${client.user.username} adı ile giriş yaptı!`);
 });
+  client.user.setGame('Küfür-Reklam Koruma Deneme Botu');
 
 client.on('message', msg => {
   console.log(`LOG: S: ${msg.guild.name} M: ${msg.content} Y: ${msg.author.tag}`);
@@ -22,6 +23,19 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'davet') {
     msg.reply('https://discordapp.com/oauth2/authorize?client_id=408549238734323712&scope=bot&permissions=-1');
   }
+//ne bakıyon
+client.on("message", msg => {
+  if (msg.content.toLowerCase().match(/(porn|nude|fuck|amk|mal|göt|oç|oc|aq|amına|amık|orusbu|oruspu|nah|piç|sikik|gerizekalı|salak|sik|nsfw)/g) && !msg.author.bot && msg.channel.type === "text" && msg.channel.permissionsFor(msg.guild.member(client.user)).has("MANAGE_MESSAGES")) {
+    msg.delete(30).then(deletedMsg => {
+      deletedMsg.reply(":x: Üzgünüm,bu sunucuda küfür edemezsin! :x: ").catch(e => {
+        console.error(e);
+      });
+    }).catch(e => {
+      console.error(e);
+    });
+  }
+});
+//ne bakıyon
 //Koruma
 client.on("message", msg => {
   if (msg.content.toLowerCase().match(/(discord\.gg\/)|(discordapp\.com\/invite\/)/g) && !msg.author.bot && msg.channel.type === "text" && msg.channel.permissionsFor(msg.guild.member(client.user)).has("MANAGE_MESSAGES")) {
