@@ -6,6 +6,7 @@ var prefix = process.env.prefix;
 
 client.on('ready', () => {
   console.log(`BOT: ${client.user.username} adı ile giriş yaptı!`);
+ client.user.setGame(` ${client.guilds.size}`);
 });
 
 client.on('message', msg => {
